@@ -1,25 +1,52 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from "react";
+import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
+
+import Header from "./components/Header";
+import Atlas from "./components/Image";
+import Info from "./components/Video";
+
+class App extends Component {
+  // // Prevent page reload, clear input, set URL and push history on submit
+  // handleSubmit = (e, history, searchInput) => {
+  //   e.preventDefault();
+  //   e.currentTarget.reset();
+  //   let url = `/search/${searchInput}`;
+  //   history.push(url);
+  // };
+
+
+  videosMap = {
+    'ripple_random': 'videos/ripple-random2.mp4'
+  }
+
+  imagesMaps = {
+    'reglow_wiggle': 'videos/reglow_wiggle_5.mp4'
+  }
+  
+  render() {
+    return (
+        <HashRouter basename="/AtlasKolapsu">
+          <div className="container">
+            <Route
+              render={props => (
+                <Header/>
+              )}
+            />
+            <Switch>
+              <Route
+                exact
+                path="/"
+                render={() => <Redirect to="/atlas" />}
+              />
+              <Route path="/atlas" render={() => <Atlas/>} />
+              <Route path="/info" render={() => <Info/>} />
+            </Switch>
+          </div>
+        </HashRouter>
+    );
+  }
 }
 
 export default App;
