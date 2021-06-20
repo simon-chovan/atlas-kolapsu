@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 
 import { NavLink } from 'react-router-dom';
-import App from '../App.js'
 
 class Header extends Component {
-// const Header = () => {
   constructor(props) {
     super(props);
   };

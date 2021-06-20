@@ -1,9 +1,7 @@
 import React from "react";
 
 const Image = ({ path, title }) => (
-  <div>
-    <img src={path} alt={title} />
-  </div>
+    <img src={path} alt={title} style={{ width: "100%", height: "auto" }}/>
 );
 
 export default Image;

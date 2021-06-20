@@ -38,11 +38,12 @@ class App extends Component {
   render() {
     return (
       <div style={{ background: this.state.backgroundColor, color: this.state.textColor }} id="main">
-        <HashRouter basename="/atlas-kolapsu">
+        {/* <HashRouter basename="/atlas-kolapsu"> */}
+        <HashRouter>
           <div className="container">
             <Route
               render={props => (
-                <Header appChangeColor={this.changeColor}/>
+                <Header appChangeColor={this.changeColor} />
               )}
             />
             <Switch>
@@ -51,8 +52,8 @@ class App extends Component {
                 path="/"
                 render={() => <Redirect to="/atlas" />}
               />
-              <Route path="/atlas" render={props => <Atlas/>} />
-              <Route path="/info" render={props => <Info/>} />
+              <Route path="/atlas" render={props => <Atlas />} />
+              <Route path="/info" render={props => <Info />} />
               <Route component={NotFound} />
             </Switch>
           </div>
