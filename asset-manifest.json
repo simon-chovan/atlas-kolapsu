@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/atlas-kolapsu/static/css/main.4aa6bc4a.chunk.css",
-    "main.js": "/atlas-kolapsu/static/js/main.d65f8538.chunk.js",
-    "main.js.map": "/atlas-kolapsu/static/js/main.d65f8538.chunk.js.map",
+    "main.css": "/atlas-kolapsu/static/css/main.5ecc401e.chunk.css",
+    "main.js": "/atlas-kolapsu/static/js/main.629a32ff.chunk.js",
+    "main.js.map": "/atlas-kolapsu/static/js/main.629a32ff.chunk.js.map",
     "runtime-main.js": "/atlas-kolapsu/static/js/runtime-main.a724bc32.js",
     "runtime-main.js.map": "/atlas-kolapsu/static/js/runtime-main.a724bc32.js.map",
     "static/js/2.3642591a.chunk.js": "/atlas-kolapsu/static/js/2.3642591a.chunk.js",
@@ -10,13 +10,15 @@
     "static/js/3.0f2ba4ac.chunk.js": "/atlas-kolapsu/static/js/3.0f2ba4ac.chunk.js",
     "static/js/3.0f2ba4ac.chunk.js.map": "/atlas-kolapsu/static/js/3.0f2ba4ac.chunk.js.map",
     "index.html": "/atlas-kolapsu/index.html",
-    "static/css/main.4aa6bc4a.chunk.css.map": "/atlas-kolapsu/static/css/main.4aa6bc4a.chunk.css.map",
-    "static/js/2.3642591a.chunk.js.LICENSE.txt": "/atlas-kolapsu/static/js/2.3642591a.chunk.js.LICENSE.txt"
+    "static/css/main.5ecc401e.chunk.css.map": "/atlas-kolapsu/static/css/main.5ecc401e.chunk.css.map",
+    "static/js/2.3642591a.chunk.js.LICENSE.txt": "/atlas-kolapsu/static/js/2.3642591a.chunk.js.LICENSE.txt",
+    "static/media/cista4.56194967.mp4": "/atlas-kolapsu/static/media/cista4.56194967.mp4",
+    "static/media/testimg.10aaa173.jpg": "/atlas-kolapsu/static/media/testimg.10aaa173.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.a724bc32.js",
     "static/js/2.3642591a.chunk.js",
-    "static/css/main.4aa6bc4a.chunk.css",
-    "static/js/main.d65f8538.chunk.js"
+    "static/css/main.5ecc401e.chunk.css",
+    "static/js/main.629a32ff.chunk.js"
   ]
 }
