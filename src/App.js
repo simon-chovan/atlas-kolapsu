@@ -4,8 +4,9 @@ import React, { Component } from "react";
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import Header from "./components/Header";
-import Atlas from "./components/Image";
-import Info from "./components/Video";
+import Atlas from "./components/Atlas";
+import Info from "./components/Info";
+import NotFound from "./components/NotFound";
 
 class App extends Component {
   // // Prevent page reload, clear input, set URL and push history on submit
@@ -16,6 +17,10 @@ class App extends Component {
   //   history.push(url);
   // };
 
+  constructor(props) {
+    super(props);
+    this.state = { backgroundColor: "white", textColor: "red" };
+  }
 
   videosMap = {
     'ripple_random': 'videos/ripple-random2.mp4'
@@ -24,14 +29,20 @@ class App extends Component {
   imagesMaps = {
     'reglow_wiggle': 'videos/reglow_wiggle_5.mp4'
   }
-  
+
+  changeColor = (backgroundColor, textColor) => {
+    document.body.style.backgroundColor = backgroundColor;
+    this.setState({ backgroundColor: backgroundColor, textColor: textColor });
+  };
+
   render() {
     return (
-        <HashRouter basename="/AtlasKolapsu">
+      <div style={{ background: this.state.backgroundColor, color: this.state.textColor }} id="main">
+        <HashRouter basename="/atlas-kolapsu">
           <div className="container">
             <Route
               render={props => (
-                <Header/>
+                <Header appChangeColor={this.changeColor}/>
               )}
             />
             <Switch>
@@ -40,11 +51,13 @@ class App extends Component {
                 path="/"
                 render={() => <Redirect to="/atlas" />}
               />
-              <Route path="/atlas" render={() => <Atlas/>} />
-              <Route path="/info" render={() => <Info/>} />
+              <Route path="/atlas" render={props => <Atlas/>} />
+              <Route path="/info" render={props => <Info/>} />
+              <Route component={NotFound} />
             </Switch>
           </div>
         </HashRouter>
+      </div>
     );
   }
 }
