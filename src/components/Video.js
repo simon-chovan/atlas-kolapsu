@@ -2,12 +2,9 @@ import React from 'react';
 import ReactPlayer from 'react-player/file';
 
 const Video = ({ path, title }) => (
-    <div>
-        <ReactPlayer className="video-item"
-            playing muted loop url={path} alt={title}
-            style={{ width: "100%", height: "auto" }}
-        />
-    </div>
+    <ReactPlayer className="video-item"
+        playing muted loop url={path} alt={title} width="100%" height="auto"
+    />
 );
 
 export default Video;

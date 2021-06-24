@@ -71,11 +71,11 @@ class Atlas extends Component {
 
     // Convert array to JSX items
     items = this.items.map(function (item) {
-        if (item.type == 'image') {
-            return <Image path={item.src} title={item.title} />
+        if (item.type === 'image') {
+            return <Image path={item.src} title={item.title} key={item.id} />
         }
-        else if (item.type == 'video') {
-            return <Video path={item.src} title={item.title} />
+        else if (item.type === 'video') {
+            return <Video path={item.src} title={item.title} key={item.id} />
         }
         else {
             const min = 200;
